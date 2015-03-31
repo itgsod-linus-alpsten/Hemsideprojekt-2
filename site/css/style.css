@@ -1,0 +1,26 @@
+body {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+}
+
+#logo_and_header{
+    background: green;
+    height: 200px;
+    width: 100%;
+}
+
+#logo{
+    background: darkgreen;
+    height: 100%;
+    width: 30%;
+    float: left;
+}
+
+#header{
+    background: lightgreen;
+    float: left;
+    height: 100%;
+    width: 70%;
+}
