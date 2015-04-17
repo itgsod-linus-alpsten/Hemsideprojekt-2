@@ -1,5 +1,6 @@
 body {
     width: 1000px;
+    height: 2000px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
@@ -7,7 +8,7 @@ body {
 
 #logo_and_header{
     background: green;
-    height: 200px;
+    height: 150px;
     width: 100%;
 }
 
@@ -23,4 +24,41 @@ body {
     float: left;
     height: 100%;
     width: 70%;
+}
+
+#menu_bar table{
+    width: 100%;
+    border-spacing: 0px;
+}
+
+#menu_bar td{
+    width: 25%;
+    border: solid;
+    border-width: 2px;
+}
+
+#menu_bar h1{
+    text-align: center;
+}
+
+#side_menu {
+    position: fixed;
+    padding-top: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: blue;
+    width: 250px;
+    height: 300px;
+}
+
+#sub_list {
+    margin-left: 20px;
+}
+
+#container {
+    background-color: red;
+    margin: 1%;
+    width: 73%;
+    height: 400px;
+    float: right;
 }
