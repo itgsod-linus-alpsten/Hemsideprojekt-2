@@ -46,9 +46,10 @@ body {
     padding-top: 20px;
     margin-top: 10px;
     border-radius: 10px;
-    background-color: blue;
-    width: 250px;
+    background-color: white;
+    width: 244px;
     height: 300px;
+    border:solid;
 }
 
 #sub_list {
@@ -61,4 +62,21 @@ body {
     width: 73%;
     height: 400px;
     float: right;
+}
+
+#button:hover {
+    background: red;
+}
+
+#container h1 {
+    width: 688px;
+    margin: 21px;
+    text-decoration: underline;
+}
+
+#container p {
+    width: 688px;
+    margin-left: 21px;
+    border-bottom: solid;
+    border-width: 1px;
 }
