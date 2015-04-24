@@ -56,27 +56,21 @@ body {
     margin-left: 20px;
 }
 
-#container {
-    background-color: red;
-    margin: 1%;
-    width: 73%;
-    height: 400px;
-    float: right;
-}
 
 #button:hover {
     background: red;
 }
 
-#container h1 {
-    width: 688px;
-    margin: 21px;
-    text-decoration: underline;
+#text_container {
+    background-color: red;
+    width: 69%;
+    float: right;
+    padding: 3%;
+    margin-top: 10px;
+    border-radius: 10px;
 }
 
-#container p {
-    width: 688px;
-    margin-left: 21px;
-    border-bottom: solid;
-    border-width: 1px;
+#text_container h1 {
+    margin-top: 0;
+    text-decoration: underline;
 }
