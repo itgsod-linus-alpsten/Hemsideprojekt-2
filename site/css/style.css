@@ -50,6 +50,7 @@ body {
     width: 244px;
     height: 300px;
     border:solid;
+    z-index: -1;
 }
 
 #sub_list {
@@ -68,9 +69,56 @@ body {
     padding: 3%;
     margin-top: 10px;
     border-radius: 10px;
+    z-index: 0;
 }
 
 #text_container h1 {
     margin-top: 0;
     text-decoration: underline;
+}
+
+
+
+#menu ul {
+    width: 100%;
+    background-color: white;
+    border-spacing: 0px;
+    list-style: none;
+    padding: 0px;
+}
+
+#menu ul li {
+    width: 246px;
+    display: block;
+    border: solid;
+    border-width: 2px;
+    float: left;
+}
+
+#menu h1 {
+    height: 100%;
+}
+
+#menu li ul {
+    display: none;
+}
+
+#menu li:hover ul {
+    display: inline;
+    position: relative;
+    z-index: 1;
+}
+
+#menu li li {
+    background-color: inherit;
+}
+
+#button ul {
+    display: none;
+}
+
+#button:hover ul {
+    display: inherit;
+    position: relative;
+    z-index: 1;
 }

@@ -1,0 +1,39 @@
+#menu {
+    display: block;
+    width: 1000px;
+    height: 86px;
+    background-color: green;
+    margin: 0;
+}
+
+ul li {
+    width: 25%;
+    display: block;
+    position: relative;
+    float: left;
+}
+
+#menu h2 {
+    height: 100%;
+}
+
+li ul {
+    display: none;
+}
+
+li:hover ul {
+    display: inline;
+    position: relative;
+    z-index: 1;
+}
+
+li li {
+    float: none;
+    background-color: blue;
+    margin: 1px;
+}
+
+div {
+    position: absolute;
+    z-index: -1;
+}
