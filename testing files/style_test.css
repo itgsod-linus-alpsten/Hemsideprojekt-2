@@ -1,0 +1,62 @@
+body {
+    height: 2000px;
+}
+
+#menu {
+    display: block;
+    width: 1000px;
+    height: 86px;
+    background-color: green;
+    margin: 0;
+}
+
+ul li {
+    width: 25%;
+    display: block;
+    position: relative;
+    float: left;
+}
+
+#menu h2 {
+    height: 100%;
+}
+
+li ul {
+    display: none;
+}
+
+li:hover ul {
+    display: inline;
+    position: relative;
+    z-index: 1;
+}
+
+li li {
+    float: none;
+    background-color: blue;
+    margin: 1px;
+}
+
+#sticky {
+    height: 200px;
+    width: 200px;
+    color: blue;
+}
+
+#sticky.stick {
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+}
+
+#side_menu {
+    height: 300px;
+    width: 244px;
+    border: solid;
+    border-radius: 10px;
+}
+
+#list_header {
+    float: left;
+    margin: 0px;
+}

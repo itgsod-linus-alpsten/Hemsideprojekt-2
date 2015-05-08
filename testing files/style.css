@@ -1,39 +1,148 @@
-#menu {
-    display: block;
+body {
     width: 1000px;
-    height: 86px;
-    background-color: green;
-    margin: 0;
+    height: 2000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
 }
 
-ul li {
-    width: 25%;
-    display: block;
-    position: relative;
+#logo_and_header{
+    background: green;
+    height: 150px;
+    width: 100%;
+}
+
+#logo{
+    background: darkgreen;
+    height: 100%;
+    width: 30%;
     float: left;
 }
 
-#menu h2 {
+#header{
+    background: lightgreen;
+    float: left;
+    height: 100%;
+    width: 70%;
+}
+
+#menu_bar table{
+    width: 100%;
+    border-spacing: 0px;
+}
+
+#menu_bar td{
+    width: 25%;
+    border: solid;
+    border-width: 2px;
+}
+
+#menu_bar h1{
+    text-align: center;
+}
+
+#side_menu {
+    position: absolute;
+    padding-top: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: white;
+    width: 244px;
+    height: 300px;
+    border:solid;
+    z-index: -1;
+}
+
+#side_menu.stick {
+    position: fixed;
+    top: 0px;
+    z-index: 10000;
+}
+
+#sub_list {
+    margin-left: 20px;
+}
+
+
+#button:hover {
+    background: yellow;
+}
+
+#text_container {
+    background-color: red;
+    width: 69%;
+    float: right;
+    padding: 3%;
+    margin-top: 10px;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+#text_container h1 {
+    margin-top: 0;
+    text-decoration: underline;
+}
+
+#menu {
+    height: 84px;
+    margin-top: -16px;
+    position: relative;
+}
+
+#menu ul {
+    width: 100%;
+    background-color: white;
+    border-spacing: 0px;
+    list-style: none;
+    padding: 0px;
+}
+
+#menu ul li {
+    width: 246px;
+    display: block;
+    border: solid;
+    border-width: 2px;
+    float: left;
+}
+
+#menu h1 {
     height: 100%;
 }
 
-li ul {
+#menu li ul {
     display: none;
 }
 
-li:hover ul {
+#menu li:hover ul {
     display: inline;
+    position: absolute;
+    width: 246px;
+    margin-left: 0px;
+    z-index: 1;
+    margin-top: 2px;
+}
+
+#menu li li {
+    background-color: yellow;
+    margin-left: -2px;
+    border-top: 0px;
+}
+
+#button ul {
+    display: none;
+}
+
+#button:hover ul {
+    display: inherit;
     position: relative;
     z-index: 1;
 }
 
-li li {
-    float: none;
-    background-color: blue;
-    margin: 1px;
+#menu a {
+    color: black;
+    text-decoration: none;
 }
 
-div {
-    position: absolute;
-    z-index: -1;
+a h1 {
+    text-align: center;
 }

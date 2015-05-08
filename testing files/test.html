@@ -2,8 +2,25 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style_test.css"/>
     <title>just testing stuff</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function sticky_relocate() {
+            var window_top = $(window).scrollTop();
+            var div_top = $('#sticky-anchor').offset().top;
+            if (window_top > div_top) {
+                $('#sticky').addClass('stick');
+            } else {
+                $('#sticky').removeClass('stick');
+            }
+        }
+
+        $(function () {
+            $(window).scroll(sticky_relocate);
+            sticky_relocate();
+        });
+    </script>
 </head>
 <body>
 <ul id="menu">
@@ -23,6 +40,12 @@
     <li>test3</li>
     <li>test4</li>
 </ul>
-<div>hhhggwegew</div>
+<div id="side_menu">
+    <ul>
+        <li id="list_header"><a href=""><h3>Hem</h3></a></li>
+    </ul>
+</div>
+<div id="sticky-anchor"></div>
+<div id="sticky">hhhggwegew</div>
 </body>
 </html>
