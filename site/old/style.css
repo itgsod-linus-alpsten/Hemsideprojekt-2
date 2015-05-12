@@ -42,7 +42,7 @@ body {
 }
 
 #side_menu {
-    position: absolute;
+    position: fixed;
     padding-top: 20px;
     margin-top: 10px;
     border-radius: 10px;
@@ -53,19 +53,13 @@ body {
     z-index: -1;
 }
 
-#side_menu.stick {
-    position: fixed;
-    top: 0px;
-    z-index: 10000;
-}
-
 #sub_list {
     margin-left: 20px;
 }
 
 
 #button:hover {
-    background: yellow;
+    background: red;
 }
 
 #text_container {
@@ -83,11 +77,7 @@ body {
     text-decoration: underline;
 }
 
-#menu {
-    height: 84px;
-    margin-top: -16px;
-    position: relative;
-}
+
 
 #menu ul {
     width: 100%;
@@ -115,17 +105,12 @@ body {
 
 #menu li:hover ul {
     display: inline;
-    position: absolute;
-    width: 246px;
-    margin-left: 0px;
+    position: relative;
     z-index: 1;
-    margin-top: 2px;
 }
 
 #menu li li {
-    background-color: yellow;
-    margin-left: -2px;
-    border-top: 0px;
+    background-color: inherit;
 }
 
 #button ul {
@@ -136,17 +121,4 @@ body {
     display: inherit;
     position: relative;
     z-index: 1;
-}
-
-#menu a {
-    color: black;
-    text-decoration: none;
-}
-
-a h1 {
-    text-align: center;
-}
-
-.active_url {
-    background-color: blue;
 }
