@@ -146,3 +146,7 @@ body {
 a h1 {
     text-align: center;
 }
+
+.active_url {
+    background-color: blue;
+}

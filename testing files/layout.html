@@ -17,9 +17,25 @@
         }
 
         $(function () {
+            test();
             $(window).scroll(sticky_relocate);
             sticky_relocate();
         });
+    </script>
+    <script type="text/javascript">
+        function test() {
+            $('.menu_url').each(function () {
+                if ( url_matches($(this).attr('href')) ) {
+                    $('#button').addClass('active_url')
+                }
+            })
+        };
+
+        function url_matches(url) {
+            url_path = '/Hemsideprojekt-2/testing%20files/' + url
+            return url_path === location.pathname
+        }
+
     </script>
 </head>
 <body>
@@ -30,10 +46,10 @@
     <div id="menu">
         <ul id="menu_items">
             <li id="button">
-                <a href=""><h1>Hem</h1></a>
+                <a class="menu_url" id="menu_url" href="layout.html"><h1>Hem</h1></a>
             </li>
             <li id="button">
-                <a href=""><h1>Inriktningar</h1></a>
+                <a class="menu_url" id="menu_url" href=""><h1>Inriktningar</h1></a>
                 <ul>
                     <li><a href="">Odling</a></li>
                     <li><a href="">Maskiner</a></li>
@@ -41,7 +57,7 @@
                 </ul>
             </li>
             <li id="button">
-                <a href=""><h1>Om oss</h1></a>
+                <a class="menu_url" id="menu_url" href=""><h1>Om oss</h1></a>
                 <ul>
                     <li><a href="">Vart?</a></li>
                     <li><a href="">Personal</a></li>
@@ -49,7 +65,7 @@
                 </ul>
             </li>
             <li id="button">
-                <a href=""><h1>Kontakta oss</h1></a>
+                <a class="menu_url" id="menu_url" href=""><h1>Kontakta oss</h1></a>
                 <ul>
                     <li><a href="">E-mail</a></li>
                     <li><a href="">Telefon nummer</a></li>
