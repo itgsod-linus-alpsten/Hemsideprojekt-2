@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style_cleaned.css"/>
     <title>Potatisgymnasiet</title>
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script type="text/javascript">
@@ -17,23 +17,24 @@
         }
 
         $(function () {
-            test();
+            active();
             $(window).scroll(sticky_relocate);
             sticky_relocate();
         });
     </script>
     <script type="text/javascript">
-        function test() {
+        function active() {
             $('.menu_url').each(function () {
                 if ( url_matches($(this).attr('href')) == true ) {
                     $(this).parent().addClass('current_url')
                 }
             })
-        };
+        }
 
         function url_matches(url) {
-            var url_path = location.pathname.substring(0, location.pathname.lastIndexOf('/')+1) + url;
-            return url_path == location.pathname
+            if (url == ""){return false}
+            var url_regex = new RegExp(url);
+            return url_regex.test(location.pathname);
         }
 
     </script>
@@ -51,7 +52,7 @@
         <li id="button">
             <a class="menu_url" href="inriktningar.html"><div><h1>Inriktningar</h1></div></a>
             <ul>
-                <li class="button"><a href="">Odling</a></li>
+                <li class="button"><a href="inriktningar.html#odling">Odling</a></li>
                 <li class="button"><a href="">Maskiner</a></li>
                 <li class="button"><a href="">Djur</a></li>
             </ul>
@@ -65,7 +66,7 @@
             </ul>
         </li>
         <li id="button">
-            <a class="menu_url" href=""><div><h1>Kontakta oss</h1></div></a>
+            <a class="menu_url" href="kontakta.html"><div><h1>Kontakta oss</h1></div></a>
             <ul>
                 <li class="button"><a href="">E-mail</a></li>
                 <li class="button"><a href="">Telefon nummer</a></li>
@@ -76,45 +77,41 @@
 </div>
 <div id="sticky-anchor"></div>
 <div id="side_menu">
-    <list>
-        <a href=""><li><h3 style="margin: 0px">Hem</h3></li></a>
-        <a href=""><li><h3 style="margin: 0px">Inriktningar</h3></li></a>
-        <div id="sub_list">
-            <list>
-                <li><a href="layout.html#test">Odling</a></li>
-                <li><a href="layout.html#test2">Maskiner</a></li>
-                <li><a href="layout.html#test3">Djur</a></li>
-            </list>
-        </div>
-        <a href=""><li><h3 style="margin: 0px">Om oss</h3></li></a>
-        <div id="sub_list">
-            <list>
-                <a href=""><li>Vart?</li></a>
-                <a href=""><li>Personal</li></a>
-                <a href=""><li>Studiestöd</li></a>
-            </list>
-        </div>
-        <a href=""><li><h3 style="margin: 0px">Kontakta oss</h3></li></a>
-        <div id="sub_list">
-            <list>
-                <a href=""><li>E-mail</li></a>
-                <a href=""><li>Telefon nummer</li></a>
-                <a href=""><li>Brevgris(rekommenderas)</li></a>
-            </list>
-        </div>
-    </list>
+    <ul>
+        <a href=""><li><h3>Hem</h3></li></a>
+        <a href=""><li><h3>Inriktningar</h3></li></a>
+        <ul>
+            <li><a href="layout.html#test">Odling</a></li>
+            <li><a href="layout.html#test2">Maskiner</a></li>
+            <li><a href="layout.html#test3">Djur</a></li>
+        </ul>
+        <a href=""><li><h3>Om oss</h3></li></a>
+        <ul>
+            <a href=""><li>Vart?</li></a>
+            <a href=""><li>Personal</li></a>
+            <a href=""><li>Studiestöd</li></a>
+        </ul>
+        <a href=""><li><h3>Kontakta oss</h3></li></a>
+        <ul>
+            <a href=""><li>E-mail</li></a>
+            <a href=""><li>Telefon nummer</li></a>
+            <a href=""><li>Brevgris(rekommenderas)</li></a>
+        </ul>
+    </ul>
 </div>
-<div class="text_container" id="test">
-    <h1>test</h1>
-    <p>ihuewrgphewgh hegphwehrgpuphpphpuhhhhhh hhhh <br/> wiehugphwergphwehg</p>
-</div>
-<div class="text_container" id="test2">
-    <h1>test2</h1>
-    <p>ihuewrgphewgh hegphwehrgpuphpphpuhhhhhh hhhh <br/> wiehugphwergphwehg</p>
-</div>
-<div class="text_container" id="test3">
-    <h1>werghewrgphwerphugp</h1>
-    <p>ergpuehwrgihpwhihoohohhhjjkhoiugoiboubr</p>
+<div id="container">
+    <div class="text_container" id="test">
+        <h1>test</h1>
+        <p>ihuewrgphewgh hegphwehrgpuphpphpuhhhhhh hhhh <br/> wiehugphwergphwehg</p>
+    </div>
+    <div class="text_container" id="test2">
+        <h1>test2</h1>
+        <p>ihuewrgphewgh hegphwehrgpuphpphpuhhhhhh hhhh <br/> wiehugphwergphwehg</p>
+    </div>
+    <div class="text_container" id="test3">
+        <h1>werghewrgphwerphugp</h1>
+        <p>ergpuehwrgihpwhihoohohhhjjkhoiugoiboubr</p>
+    </div>
 </div>
 </body>
 </html>

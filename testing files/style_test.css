@@ -3,60 +3,65 @@ body {
 }
 
 #menu {
-    display: block;
     width: 1000px;
-    height: 86px;
-    background-color: green;
-    margin: 0;
+    height: 84px;
+    background-color: aqua;
 }
 
-ul li {
-    width: 25%;
-    display: block;
-    position: relative;
+#menu li {
+    list-style: none;
+    border: solid;
+    border-width: 2px;
     float: left;
+    width: 246px;
 }
 
-#menu h2 {
-    height: 100%;
+#menu ul {
+    padding-left: 0px;
 }
 
-li ul {
+a h1 {
+    text-align: center;
+    margin-top: 0px;
+}
+
+#menu li ul {
     display: none;
+    margin-top: 2px;
+    background-color: gray;
+    width: 246px;
 }
 
-li:hover ul {
+#menu li:hover ul{
     display: inline;
-    position: relative;
+    position: absolute;
     z-index: 1;
 }
 
-li li {
-    float: none;
-    background-color: blue;
-    margin: 1px;
+#menu li li {
+    margin-left: -2px;
+    float: left;
+    height: 20px;
 }
 
-#sticky {
-    height: 200px;
-    width: 200px;
-    color: blue;
-}
-
-#sticky.stick {
-    position: fixed;
-    top: 0;
-    z-index: 10000;
+.inflater {
+    height: 100%;
+    padding-top: 21.44px;
 }
 
 #side_menu {
-    height: 300px;
-    width: 244px;
-    border: solid;
+    float: left;
     border-radius: 10px;
+    background-color: aquamarine;
+    width: 244px;
+    height: 300px;
+    border: solid;
 }
 
-#list_header {
-    float: left;
+#side_menu ul {
+    padding-left: 20px;
+}
+
+#side_menu h3 {
     margin: 0px;
 }
