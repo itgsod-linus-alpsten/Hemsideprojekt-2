@@ -144,3 +144,7 @@ p {
 #side_menu li {
     height: 10px;
 }
+
+#large_logo {
+    display: none;
+}
